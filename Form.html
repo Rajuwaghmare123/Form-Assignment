@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+    <div class="title-container">
+    <h2>Admission Form For Geekster</h2>
+    </div>
+   
+    <div class="form-container">
+        <form autocomplete="off">
+            <h4>Personal Info :</h4>
+            <!-- first Name ,Last Name, Mail (email id),Contact Number ,Gender,Data Of Birth ,Address,College name , ,Year of graduation,Degree,Resume -->
+            <input type="text" class="inline mt-4" name="f_name" placeholder="First Name" required/>
+            <input type="text" class="inline mt-4" name="l_name" placeholder="Last Name"/>
+            <br/>
+            <input type="email" class="inline mt-4" name="mail" placeholder="Email ID" required />
+            <input type="tel" class="inline mt-4" name="phone" placeholder="Phone Number" required pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" />
+            <br/>
+            <input type="date" class="inline mt-4" name="Date_of_Birth" max="2022-01-01">
+            <select class="inline" name="gender">
+            <option selected disabled >Select Gender</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+            <option value="">Other </option>
+            <!-- <option value="">Other 2</option>
+            <option value="">Other 3</option>
+            <option value="">Other 4</option>
+            <optgroup label="Something Other">
+            <option value="">Other 5</option>
+            <option value="">Other 6</option>
+            <option value="">Other 7</option> -->
+            </optgroup>
+        </select>
+        
+        <textarea name="address" placeholder="Address" ></textarea>
+        <br>
+        <hr/>
+            <h4>Education Info :</h4>
+     
+        <select name="degree" class="inline m-4" >
+            <option selected disabled>Select Degree</option>
+            <optgroup label="Bachelors">
+                <option >B.Tech</option>
+                <option >B.E</option>
+                <option >B.Sc</option>
+            </optgroup>
+            <optgroup label="Masters">
+                <option >M.Tech</option>
+                <option >M.E</option>
+                <option >M.Sc</option>
+            </optgroup>
+        </select>
+        <input type="text" name="college" class="inline m-4" placeholder="College Name"/>
+        <br/>
+        <input type="number" name="graduation_year" class="inline m-4" placeholder="Year of Graduation" min="2010" max="2022"/>
+        
+        <input type="number" name="percentage" class="inline m-4" placeholder="percentage" min="0" max="100" step="0.1" />
+        <br>
+       <span> Upload Resume :</span><input type="file" class="inline " name="file"/>
+       <br>
+        <hr/>
+        <h4>Course Details :</h4>
+
+        <p>Which Level Do you Want to Enroll ??</p>
+        <input type="radio" class="inline m-6" name="course_type"> <span> Fundamental </span>
+        <input type="radio" class="inline m-6" name="course_type"> <span> Advanced </span>
+        <p>Which Course Do you Want to Enroll ??</p>
+        <input type="checkbox" class="inline m-6" >Web
+        <input type="checkbox" class="inline m-6" >DSA
+        <hr>
+        <input type="submit" class="inline m-7" value="Apply For Admission">
+        <input type="reset" class="inline m-8" value="Reset">
+        </form>
+    </div>
+</body>
+</html>  
